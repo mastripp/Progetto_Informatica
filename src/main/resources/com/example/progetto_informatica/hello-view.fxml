@@ -1,16 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.progetto_informatica.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<BorderPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets bottom="20" top="20" />
+            </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+            <Label style="-fx-font-size: 28px; -fx-font-weight: bold;" text="TEATRO" />
+
+            <Label alignment="CENTER" prefWidth="500" style="-fx-background-color: black;                           -fx-text-fill: white;                           -fx-font-size: 20px;                           -fx-padding: 15px;" text="SCHERMO" />
+        </VBox>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER" spacing="40">
+
+            <GridPane hgap="10" vgap="10">
+
+                <Button prefWidth="50" text="A1" />
+                <Button prefWidth="50" text="A2" GridPane.columnIndex="1" />
+                <Button prefWidth="50" text="A3" GridPane.columnIndex="2" />
+
+                <Button prefWidth="50" text="B1" GridPane.rowIndex="1" />
+                <Button prefWidth="50" text="B2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button prefWidth="50" text="B3" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                <Button prefWidth="50" text="C1" GridPane.rowIndex="2" />
+                <Button prefWidth="50" text="C2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button prefWidth="50" text="C3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+                <Button prefWidth="50" text="D1" GridPane.rowIndex="3" />
+                <Button prefWidth="50" text="D2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button prefWidth="50" text="D3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+                <Button prefWidth="50" text="E1" GridPane.rowIndex="4" />
+                <Button prefWidth="50" text="E2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button prefWidth="50" text="E3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+                <Button prefWidth="50" text="F1" GridPane.rowIndex="5" />
+                <Button prefWidth="50" text="F2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Button prefWidth="50" text="F3" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+
+            </GridPane>
+
+            <GridPane hgap="10" vgap="10">
+
+                <Button prefWidth="55" text="A4" />
+                <Button prefWidth="55" text="A5" GridPane.columnIndex="1" />
+                <Button prefWidth="55" text="A6" GridPane.columnIndex="2" />
+                <Button prefWidth="55" text="A7" GridPane.columnIndex="3" />
+                <Button prefWidth="55" text="A8" GridPane.columnIndex="4" />
+                <Button prefWidth="55" text="A9" GridPane.columnIndex="5" />
+
+                <Button prefWidth="55" text="B4" GridPane.rowIndex="1" />
+                <Button prefWidth="55" text="B5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button prefWidth="55" text="B6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Button prefWidth="55" text="B7" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Button prefWidth="55" text="B8" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Button prefWidth="55" text="B9" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+
+                <Button prefWidth="55" text="C4" GridPane.rowIndex="2" />
+                <Button prefWidth="55" text="C5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button prefWidth="55" text="C6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button prefWidth="55" text="C7" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Button prefWidth="55" text="C8" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Button prefWidth="55" text="C9" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+
+                <Button prefWidth="55" text="D4" GridPane.rowIndex="3" />
+                <Button prefWidth="55" text="D5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button prefWidth="55" text="D6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button prefWidth="55" text="D7" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Button prefWidth="55" text="D8" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Button prefWidth="55" text="D9" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+
+                <Button prefWidth="55" text="E4" GridPane.rowIndex="4" />
+                <Button prefWidth="55" text="E5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button prefWidth="55" text="E6" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button prefWidth="55" text="E7" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Button prefWidth="55" text="E8" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Button prefWidth="55" text="E9" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+
+                <Button prefWidth="55" text="F4" GridPane.rowIndex="5" />
+                <Button prefWidth="55" text="F5" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Button prefWidth="55" text="F6" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Button prefWidth="55" text="F7" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Button prefWidth="55" text="F8" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <Button prefWidth="55" text="F9" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+
+            </GridPane>
+
+            <GridPane hgap="10" vgap="10">
+
+                <Button prefWidth="50" text="A10" />
+                <Button prefWidth="50" text="A11" GridPane.columnIndex="1" />
+                <Button prefWidth="50" text="A12" GridPane.columnIndex="2" />
+
+                <Button prefWidth="50" text="B10" GridPane.rowIndex="1" />
+                <Button prefWidth="50" text="B11" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button prefWidth="50" text="B12" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                <Button prefWidth="50" text="C10" GridPane.rowIndex="2" />
+                <Button prefWidth="50" text="C11" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button prefWidth="50" text="C12" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+                <Button prefWidth="50" text="D10" GridPane.rowIndex="3" />
+                <Button prefWidth="50" text="D11" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button prefWidth="50" text="D12" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+                <Button prefWidth="50" text="E10" GridPane.rowIndex="4" />
+                <Button prefWidth="50" text="E11" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button prefWidth="50" text="E12" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+                <Button prefWidth="50" text="F10" GridPane.rowIndex="5" />
+                <Button prefWidth="50" text="F11" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Button prefWidth="50" text="F12" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+
+            </GridPane>
+         <padding>
+            <Insets top="40.0" />
+         </padding>
+
+        </HBox>
+    </center>
+
+    <bottom>
+        <VBox alignment="CENTER">
+            <padding>
+                <Insets bottom="20" top="20" />
+            </padding>
+
+            <Button prefHeight="40" prefWidth="220" style="-fx-font-size: 16px;" text="Conferma Prenotazione" />
+        </VBox>
+    </bottom>
+
+</BorderPane>
