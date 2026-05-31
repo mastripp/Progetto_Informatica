@@ -1,13 +1,13 @@
 package com.example.progetto_informatica;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import java.util.ArrayList;
-import java.util.List;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HelloController {
 
@@ -15,17 +15,35 @@ public class HelloController {
     private Label labelPostiSelezionati;
 
     private List<String> postiSelezionati = new ArrayList<>();
+    private List<Button> tuttiIBottoni = new ArrayList<>();
+    private GestorePosti gestore = GestorePosti.getInstance();
+
+    public void aggiungiBottone(Button btn) {
+        tuttiIBottoni.add(btn);
+    }
+
+    public void avviaThread() {
+        Utenti t = new Utenti(tuttiIBottoni);
+        t.start();
+    }
 
     @FXML
     private void onPostoClick(javafx.event.ActionEvent event) {
         Button btn = (Button) event.getSource();
         String posto = btn.getText();
+        String stato = gestore.getStato(posto);
+
+        if (stato.equals("selezionato") || stato.equals("comprato")) {
+            return;
+        }
 
         if (postiSelezionati.contains(posto)) {
             postiSelezionati.remove(posto);
+            gestore.libera(posto);
             btn.setStyle("-fx-background-color: #d3d3d3;");
         } else {
             postiSelezionati.add(posto);
+            gestore.seleziona(posto);
             btn.setStyle("-fx-background-color: #2E8B57; -fx-text-fill: white;");
         }
 
